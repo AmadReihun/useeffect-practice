@@ -21,7 +21,7 @@ const Task4 = () => {
       setSprinkle(false);
     }, 3000);
     setAreButtonsEnabled(true);
-  }, []);
+  }, [false]);
 
   return (
     <div>

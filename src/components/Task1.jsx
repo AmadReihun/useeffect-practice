@@ -15,7 +15,7 @@ const Task1 = () => {
     axios.get("https://api.thecatapi.com/v1/images/search").then(({ data }) => {
       setCatImage(data[0].url);
     });
-  }, []);
+  }, [count]);
 
   const handleClick = () => {
     setCount((currentCount) => currentCount + 1);
@@ -28,6 +28,7 @@ const Task1 = () => {
         <img src={catImage} alt="A random cat" id={styles.catImage}></img>
       </div>
       <button className={styles.button} selected onClick={handleClick}>
+        {console.log(count)}
         New Cat
       </button>
     </div>
