@@ -21,8 +21,8 @@ const Task4 = () => {
       setSprinkle(false);
     }, 3000);
     setAreButtonsEnabled(true);
-  }, [false]);
-
+  }, [toggleButton1, toggleButton2, toggleButton3, toggleButton4]);
+ // a dependency without anything will make useEffect to run just once and if we want more, we will add other elements
   return (
     <div>
       {sprinkle ? (
